@@ -84,7 +84,7 @@ div#navmenu{
 	padding: 4px 20px;
     font-size: 13px;
 	margin: 0;
-    height: 23px;
+    height: 22px;
 	background-image: url("../images/bar_above_catcher.png");
 	background-position: center top;
 }
@@ -121,7 +121,6 @@ div#catcher_block {
 	clear:both;
 	width:960px;
 	margin:auto;
-	height: 200px;
 	padding: 10px 20px;
 	background-image:/*url("../images/bar_above_catcher.png"),*/url("../images/bar_below_catcher.png"),url("../images/catcher_back.png");
 	background-position: /*center top,*/ center bottom, left top;
@@ -130,38 +129,19 @@ div#catcher_block {
 	box-shadow: #CCC 0 5px 5px 0;
 }
 
-div.catcher_block_small {
-	height: 100px !important;
-	padding: 10px 20px;
-}
-
 div#catcher_block h1{
 	font-family: 'Acme', Verdana, sans-serif;
-	font-size:30px;
+	font-size:26px;
 	color:#59C1D7;
 	letter-spacing:0.05em;
 	font-weight:bolder;
-	float: left;
-	margin-top:30px;
-	margin-left:40px;
-}
-
-div.catcher_block_small h1{
-    font-size:26px !important;
-	margin-top:20px !important;
 }
 
 div#catcher_block div.catchme{
-	font-size:20px;
 	color:#f28705;
-	/*font-style:italic;*/
-	/*font-variant:small-caps;*/
+	font-size:18px;
 	font-family: 'Acme', cursive;
-	clear: both;
 	padding: 0 50px;
-}
-div.catcher_block_small div.catchme{
-    font-size:18px !important;
 }
 
 div#page{
@@ -243,6 +223,14 @@ acronym {
 /*----------------------------------*/
 /*				Extra				*/
 /*----------------------------------*/
+
+div.source{
+	border: 1px dashed #999;
+	overflow:auto
+	padding: 12px;
+	margin: 1em 7px 1em 7px;
+}
+
 .done{
     padding-right:30px;
     background-image : url("../images/done.png");

@@ -389,24 +389,25 @@
 				<div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
 				<div class="clear"></div>
 			</div>
-            <div id="catcher_block" class="catcher_block_small">
-            
-            	#set ($ctb = $bodyContent.indexOf("<div class=\"catcherTitle\">") )
-            	#set ($cte = $bodyContent.indexOf("</div>", $ctb) )
-            	#set ($ctbs = $ctb + 26  )
-            
-                #set ($ccb = $bodyContent.indexOf("<p class=\"catcherTitle\">") )
-            	#set ($cce = $bodyContent.indexOf("</p>", $ctb) )
-            	#set ($ccbs = $ccb + 26  )
-            	
-            	#if ($ctb > 0 )
-				<h1>$bodyContent.substring($ctbs , $cte )</h1>
-				#end
-				#if ( $ccb > 0 )
-				<div class="catchme">
-					<p>$bodyContent.substring($ccbs , $cce )</p>
-				</div>
-				#end
+            <div id="catcher_block">
+		
+		#set ($catcherTitle = $StringUtils.getNestedString($bodyContent, '<div id="catcherTitle">', '</div>')	 )
+		#if ( $catcherTitle )
+    		#set ($catcherTitleCleaner = '<div id="catcherTitle">' + ${catcherTitle} + '</div>' )
+    		#set ($bodyContent = $StringUtils.replaceOnce($bodyContent, $catcherTitleCleaner, "") )
+		#end
+		
+		#set ($catcherContent = $StringUtils.getNestedString($bodyContent, '<div id="catcherContent">', '</div>')	 )
+		#if ( $catcherContent )
+    		#set ($catcherContentCleaner = '<div id="catcherContent">' + ${catcherContent} + '</div>' )
+    		#set ($bodyContent = $StringUtils.replaceOnce($bodyContent, $catcherContentCleaner , "") )
+		#end
+		<h1>$!catcherTitle</h1>
+		<div class="catchme">
+			<p>$!catcherContent</p>
+		</div>
+		<div class="clear"></div>
+
             </div>                 
        </div>
        
