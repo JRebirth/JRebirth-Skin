@@ -261,11 +261,17 @@ img.redux  {
 	margin:auto;
 	width:200px;
 }
-.nextDocPage{
+div.nextDocPage{
 	float:right;
 }
-.previousDocPage{
+div.nextDocPage a:before{
+    content: "Next - ";
+}
+div.previousDocPage{
 	float:left;
+}
+div.previousDocPage a:before{
+    content: "Previous - ";
 }
 .question{
 	font-style:italic;
