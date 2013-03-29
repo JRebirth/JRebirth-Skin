@@ -157,11 +157,15 @@ div#page{
 }
 
 div#footer{
+	font-size:0.9em;
 	margin-top:50px;
 	clear:both;
 	text-align:center;
 }
 
+div#footer .details{
+	font-size:0.8em;
+}
 
 /* Horizontal Block */
 
