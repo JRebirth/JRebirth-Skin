@@ -47,7 +47,7 @@ div#header{
 	background-color: #FFFFFF;
 	
 	background-image : url("../images/header_back.png");
-	background-position:center top;
+	background-position:right top;
 	background-repeat:no-repeat;
 	
 	font-size:28px;
@@ -61,15 +61,24 @@ div#header{
 
 div#header div {
 	
-	position : relative;
+	/*position : relative;
 	top:30px;
 	left: 100px;
 	width:446px;
 	height:92px;
 		
-	background-image : url("../images/titre.png");
+	background-image : url("../images/JRebirth_Title.png");
 	background-position:center top;
-	background-repeat:no-repeat;
+	background-repeat:no-repeat;*/
+	
+	 background-image: url("../images/JRebirth_Title.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 231px;
+    left: -30px;
+    position: relative;
+    top: -1px;
+    width: 760px;
 	
 }
 
@@ -146,14 +155,16 @@ div#catcher_block div.catchme{
 
 div#page{
 
-	width:960px;
+	width:1000px;
 	margin:auto;
 	background-color: #FFFFFF;
-	padding :30px 20px;
 	overflow:hidden;
-	
 	border-radius: 0 0 8px 8px ;
 	box-shadow: #CCC 0 5px 5px 0;
+}
+
+div.section{
+	padding :10px 20px;
 }
 
 div#footer{
