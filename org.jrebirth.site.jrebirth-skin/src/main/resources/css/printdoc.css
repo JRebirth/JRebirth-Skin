@@ -1,15 +1,23 @@
-div#header, div#navmenu, div#catcher{
+div#header, div#navmenu, div#catcher, div.bottomLinks, div#footer, body > a{
 	display:none;
+}
+
+div#container {
+    background-color: transparent;
+    border-radius: inherit;
+    box-shadow: inherit;
+    margin: 0;
+    width: 100%;
 }
 
 div#page{
-	padding:0;
-	background-image:url(../images/JRebirth_Logo_80px.png),url(../images/JRebirthApplicationFramework.png);
-	background-position:30px 10px, 100px 10px;
-	background-repeat:no-repeat,no-repeat;
+	padding-top:231px;
+	background-image:url(../images/JRebirth_Title.png);
+	background-position:left top;
+	background-repeat:no-repeat;
+	
+    background-color: #FFFFFF;
+    margin: 0;
+    overflow: visible;
+    width: 100%;
 }
-
-div.bottomLinks{
-	display:none;
-}
-

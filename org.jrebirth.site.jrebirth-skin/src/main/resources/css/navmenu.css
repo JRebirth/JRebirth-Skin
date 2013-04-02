@@ -1,11 +1,10 @@
 #navmenu {
-	background-color: #FFFFFF;
+	background-color: transparent;
 	width: 1000px;
 	margin: auto;
 	height: 43px;
 	border: none;
 	border: 0px;
-	padding: 0px;
 	font-family: verdana, geneva, arial, helvetica, sans-serif;
 	font-size: 14px;
 	font-weight: bold;
@@ -17,7 +16,7 @@
 	height: 43px;
 	list-style: none;
 	margin: 0;
-	padding: 0;
+	padding: 0 20px;
 }
 
 #navmenu li {
@@ -42,9 +41,9 @@
 
 #navmenu li ul {
 	background: #e0e0e0;
-	border-left: 2px solid #f68618;
-	border-right: 2px solid #f68618;
-	border-bottom: 2px solid #f68618;
+	border-left: 1px solid #f68618;
+	border-right: 1px solid #f68618;
+	border-bottom: 1px solid #f68618;
 	display: none;
 	height: auto;
 	filter: alpha(opacity = 95);
