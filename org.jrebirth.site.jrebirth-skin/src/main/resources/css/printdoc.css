@@ -11,13 +11,12 @@ div#container {
 }
 
 div#page{
-	padding-top:231px;
-	background-image:url(../images/JRebirth_Title.png);
-	background-position:left top;
-	background-repeat:no-repeat;
-	
     background-color: #FFFFFF;
     margin: 0;
     overflow: visible;
     width: 100%;
+}
+
+img#docHeader{
+	display:block;
 }
