@@ -443,6 +443,8 @@
        </div>
        
         <div id="page">
+			
+			<img id="docHeader" src="$relativePath/images/JRebirth_Title.png" />
     	
     	    $bodyContent
 		
