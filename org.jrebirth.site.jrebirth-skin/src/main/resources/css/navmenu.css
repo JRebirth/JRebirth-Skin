@@ -25,7 +25,7 @@
 }
 
 #navmenu li a {
-	color: #666666;
+	color: #006AB0;
 	display: block;
 	font-weight: bold;
 	line-height: 43px;
@@ -35,7 +35,7 @@
 }
 
 #navmenu li a:hover {
-	color: #000000;
+	color: #A91700;
 	text-decoration: none;
 }
 
@@ -51,6 +51,7 @@
 	position: absolute;
 	width: 180px;
 	z-index: 200;
+	padding: 0 0;
 	/*top:1em;
 		/*left:0;*/
 }
@@ -73,13 +74,13 @@
 	display: block;
 	font-size: 12px;
 	font-style: normal;
-	padding: 0px 10px 0px 10px;
+	padding: 0px 15px 0px 15px;
 	text-align: justify;
 }
 
 #navmenu li ul a:hover {
-	background: #949494;
-	color: #000000;
+	background: #EAC687;
+	color: #A91700;
 	opacity: 1.0;
 	filter: alpha(opacity = 100);
 }
@@ -94,10 +95,12 @@
 }
 
 #navmenu .active>a:hover {
+	/*color: #A91700;*/
+	background: url(../images/navmenu/current-bg.gif) top left repeat-x;
 	color: #ffffff;
 }
 
 #navmenu>ul>li>a:hover {
 	background: url(../images/navmenu/hover-bg.gif) top left repeat-x;
-	color: #ffffff;
+	color: #A91700;
 }

@@ -21,22 +21,59 @@
    <li class='last'><a href='#'><span>Contact</span></a></li>
 </ul>
 *#
-
 #macro ( mainMenu $menus )
   <ul>
   #foreach( $menu in $menus )
   
 	## First Menu Level
-  	<li class="has-sub"><a><span>$menu.name</span></a>
- 		<ul>
+	
+	#set ($active = "" )
+	
+	
+	
+	
+	#if($menu.items.size() <= 1)
+			
+		#set ( $currentItemHref = $PathTool.calculateLink( $menu.items.get(0).href, $relativePath ) )
+ 	 	#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+		#set($link = $StringUtils.stripStart($menu.items.get(0).href, "/") )
+		#if (  $link.startsWith($currentFileName) ) 
+			#set ($active = "")
+		#end
+		<li class="$active"><a href="$currentItemHref"><span>$menu.items.get(0).name</span></a>
+	#else	
+		
+		#foreach($item in $menu.items)
+			#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
+ 	 		#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
+			
+			
+			#set($link = $StringUtils.stripStart($item.href, "/") )
+        	#if ( $link.startsWith($currentFileName) ) 
+        		#set ($active = "active")
+        	#end
+		#end
+		<li class="$active has-sub"><a><span>$menu.name</span></a>
+		<ul>
+		#set ( $itemIndex = 0 )
  		#foreach( $item in $menu.items )
  	
  	 		#set ( $currentItemHref = $PathTool.calculateLink( $item.href, $relativePath ) )
  	 		#set ( $currentItemHref = $currentItemHref.replaceAll( '\\', '/' ) )
  	 	
-	    	<li class="last"><a href="$currentItemHref"><span>$item.name</span></a></li>
+			#set ($nb = $menu.items.size())
+			#set ($nb = $nb - 1 )
+			#if ( $menu.items.get( $nb ) == $item )
+				<li class="last"><a href="$currentItemHref"><span>$item.name</span></a></li>
+	    	#else
+				<li><a href="$currentItemHref"><span>$item.name</span></a></li>
+			#end
+			
+			#set( $itemIndex = $itemIndex + 1 )
   		#end
   		</ul>
+	#end
+ 		
   	</li>
   #end
   </ul>
