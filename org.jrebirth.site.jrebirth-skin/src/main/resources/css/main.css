@@ -35,6 +35,16 @@ a{
 	cursor:pointer;
 }
 
+strong, b{
+	color:#E96700;
+	font-weight:600;
+}
+
+em, i{
+	font-style:italic;
+	color:#f28705;
+}
+
 /*----------------------------------*/
 /*			Container				*/
 /*----------------------------------*/
@@ -313,10 +323,6 @@ div.previousDocPage a:before{
 }
 .question{
 	font-style:italic;
-}
-.highlight{
-	color:#f28705;
-	font-weight:600;
 }
 div.bottomLinks{
 	margin-top:40px;
