@@ -225,7 +225,8 @@ div.section div{
 }*/
 
 div.syntaxhighlighter{
-	margin:10px;
+	margin:10px !important;
+	width :inherit !important;
 }
 
 div#footer{
