@@ -60,9 +60,11 @@ em, i{
 	color:#E96700;
 }
 
-div.section ul{
+div#page ul {
 	list-style-image: url("../images/bullet_list.png");
-	
+}
+div#page ul ul {
+    margin: 5px;
 }
 
 /*----------------------------------*/
@@ -353,6 +355,10 @@ div.previousDocPage a:before{
 }
 div.bottomLinks{
 	margin:40px 20px;
+}
+
+div#All-In-One div.bottomLinks, div#All-In-One div.toc{
+    display:none;
 }
 
 /* Hide catchers if printed. */
