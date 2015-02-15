@@ -158,7 +158,7 @@ div.clear{
 /*----------------------------------*/
 /*			Catcher					*/
 /*----------------------------------*/
-div#catcher{
+div.small_catcher{
 	/*background-image:,url("../images/bar_below_catcher.png");
 	background-position: center bottom;
 	background-repeat:repeat-x;
@@ -168,40 +168,72 @@ div#catcher{
 	margin: auto;
     width: 1000px;
 }
+div.small_catcher h1{
+    margin: 15px 30px 0;
+}
 
-div#catcher_block {
+div.small_catcher div.catchme{
+	float: left;
+    margin: 0;
+    padding: 15px 10px 15px 60px;
+}
+
+div.home_catcher {
 	clear:both;
 	margin:auto;
 	
-	/*padding: 10px 20px;
-	width:960px;*/
+	background-image:url("../images/bar_below_catcher.png"),url("../images/catcher_back.png");
+	background-position: center bottom, left top;
+	background-repeat: repeat-x, no-repeat;
 	
-	background-image:/*url("../images/bar_above_catcher.png"),*/url("../images/bar_below_catcher.png"),url("../images/catcher_back.png");
-	background-position: /*center top,*/ center bottom, left top;
-	background-repeat:/*repeat-x,*/ repeat-x, no-repeat;
-	
-	/*box-shadow: #CCC 0 5px 5px 0;*/
 }
 
-div#catcher_block h1{
+h1.bigBlue {
+	margin:0;
 	color:#27689E;
 	font-family: 'Acme', Verdana, sans-serif;
 	letter-spacing:0.05em;
 	font-weight:bolder;
 	font-size: 30px;
-
-    margin: 15px 30px 0;
 }
 
-div#catcher_block div.catchme{
+p.mediumOrange {
 	color:#f28705;
 	font-family: 'Acme', cursive;
-	float: left;
     font-size: 22px;
     line-height: 22px;
-    margin: 0;
-    padding: 15px 10px 15px 60px;
 }
+
+@mixin vertical-align {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+div#home_catcher div.catchLeft {
+	padding: 0 30px ;
+	float: left;
+	width:340px;
+	@include vertical-align;
+}
+div#home_catcher div.catchLeft h1.bigBlue {
+	font-size:44px;
+}
+
+div#home_catcher div.catchRight {
+	float:right;
+	width:540px;
+	padding: 0 30px;
+	@include vertical-align;
+}
+div#home_catcher div.catchRight p.mediumOrange {
+	font-size:24px;
+	line-height:30px;
+}
+
 
 div#page{
 

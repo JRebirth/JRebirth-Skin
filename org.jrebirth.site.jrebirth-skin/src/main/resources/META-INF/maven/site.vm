@@ -457,7 +457,7 @@
 				<div class="xright">#links( $decoration.body.links )#publishDate( "right" $decoration.publishDate $decoration.version )</div>
 				<div class="clear"></div>
 			</div>
-            <div id="catcher_block">
+            <div class="small_catcher">
 		
 		#set ($catcherTitle = $StringUtils.getNestedString($bodyContent, '<div id="catcherTitle">', '</div>')	 )
 		#if ( $catcherTitle )
@@ -470,9 +470,9 @@
     		#set ($catcherContentCleaner = '<div id="catcherContent">' + ${catcherContent} + '</div>' )
     		#set ($bodyContent = $StringUtils.replaceOnce($bodyContent, $catcherContentCleaner , "") )
 		#end
-		<h1>$!catcherTitle</h1>
+		<h1 class="bigBlue">$!catcherTitle</h1>
 		<div class="catchme">
-			<p>$!catcherContent</p>
+			<p class="mediumOrange">$!catcherContent</p>
 		</div>
 		<div class="clear"></div>
 
