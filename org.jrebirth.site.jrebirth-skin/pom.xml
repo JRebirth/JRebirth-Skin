@@ -42,28 +42,49 @@
 	</build>
 
 	<distributionManagement>
-
 		<repository>
-			<id>JRebirth-Release</id>
-			<name>JRebirth Releases Repository</name>
-			<url>http://repo.jrebirth.org/jrebirth-release-local</url>
+			<id>${repositoryId}</id>
+			<name>${repositoryName}</name>
+			<url>${repositoryUrl}</url>
 		</repository>
-
 		<snapshotRepository>
-			<id>JRebirth-Snapshot</id>
-			<name>JRebirth Snasphots Repository</name>
-			<url>http://repo.jrebirth.org/jrebirth-snapshot-local</url>
+			<id>${snapshotRepositoryId}</id>
+			<name>${snapshotRepositoryName}</name>
+			<url>${snapshotRepositoryUrl}</url>
 		</snapshotRepository>
-
 		<site>
 			<id>JRebirth_Sites</id>
 			<name>JRebirth Sites</name>
 			<url>ftp://jrebirth.org/sites/org.jrebirth-${project.version}</url>
 		</site>
-
 	</distributionManagement>
 
 	<profiles>
+		<!-- Legacy repo.jrebirth.org (offline / historical) -->
+		<profile>
+			<id>jrebirth-repo</id>
+			<properties>
+				<repositoryId>JRebirth-Release</repositoryId>
+				<repositoryName>JRebirth Releases Repository</repositoryName>
+				<repositoryUrl>http://repo.jrebirth.org/jrebirth-release-local</repositoryUrl>
+				<snapshotRepositoryId>JRebirth-Snapshot</snapshotRepositoryId>
+				<snapshotRepositoryName>JRebirth Snasphots Repository</snapshotRepositoryName>
+				<snapshotRepositoryUrl>http://repo.jrebirth.org/jrebirth-snapshot-local</snapshotRepositoryUrl>
+			</properties>
+		</profile>
+
+		<profile>
+			<id>github-packages</id>
+			<properties>
+				<repositoryId>github</repositoryId>
+				<repositoryName>GitHub Packages Releases</repositoryName>
+				<repositoryUrl>https://maven.pkg.github.com/JRebirth/JRebirth-Skin</repositoryUrl>
+				<snapshotRepositoryId>github</snapshotRepositoryId>
+				<snapshotRepositoryName>GitHub Packages Snapshots</snapshotRepositoryName>
+				<snapshotRepositoryUrl>https://maven.pkg.github.com/JRebirth/JRebirth-Skin</snapshotRepositoryUrl>
+			</properties>
+		</profile>
+
 		<profile>
 			<id>run-its</id>
 			<build>
