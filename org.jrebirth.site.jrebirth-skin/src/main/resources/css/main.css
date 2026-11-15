@@ -13,7 +13,32 @@
 body{
 	background-color:#F2F2F3;
 	margin: 5px 0;
-	font-family: 'PT Serif';
+	font-family: 'PT Serif', Georgia, serif;
+	line-height: 1.45;
+	color: #333;
+}
+
+/* CSS fork ribbon (no external image dependency) */
+a.github-fork-ribbon{
+	position: fixed;
+	top: 42px;
+	right: -48px;
+	z-index: 1000;
+	width: 200px;
+	padding: 6px 0;
+	background-color: #f28705;
+	color: #fff !important;
+	font: 700 12px/1.2 'Acme', Verdana, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	letter-spacing: 0.04em;
+	box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+	transform: rotate(45deg);
+	-webkit-transform: rotate(45deg);
+}
+a.github-fork-ribbon:hover{
+	background-color: #e96700;
+	color: #fff !important;
 }
 
 img{
@@ -275,14 +300,23 @@ div.syntaxhighlighter{
 
 div#footer{
 	font-size:0.9em;
-	margin-top:30px;
-	margin-bottom:15px;
+	margin-top:36px;
+	margin-bottom:20px;
+	padding: 16px 24px 8px;
 	clear:both;
 	text-align:center;
+	border-top: 1px solid #eee;
+	color: #666;
+	line-height: 1.5;
+}
+
+div#footer a{
+	color: #e96700;
 }
 
 div#footer .details{
-	font-size:0.8em;
+	font-size:0.85em;
+	color: #888;
 }
 
 /* Horizontal Block */
@@ -431,6 +465,10 @@ div.previousDocPage{
 		padding-left:50px;
 		padding-right:10px;
 	}
+}
+
+div.verbatim {
+	padding: 0.5rem 2rem;
 }
 
 .question{
